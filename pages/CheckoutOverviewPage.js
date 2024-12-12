@@ -12,7 +12,6 @@ class CheckoutOverviewPage{
     async verifyProductDetails(productName, productPrice) {
         const textOfProductName=await this.productName.textContent();
         const textOfProductPrice=await this.productPrice.textContent();
-        //const textOfItemTotalPrice=await this.itemTotalLabel.textContent();
         if(textOfProductName.trim() !== productName & textOfProductPrice.trim() !== productPrice 
         & this.shippingLabel.isVisible())
         {

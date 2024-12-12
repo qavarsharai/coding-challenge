@@ -1,7 +1,6 @@
 class ProductPage{
     constructor(page) {
       this.page = page;
-      //this.addToCartButton = page.locator("//div[text()='Sauce Labs Backpack']/ancestor::div[@class='inventory_item']//button");
     }
   
     async addToCart(product) {

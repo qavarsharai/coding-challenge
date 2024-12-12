@@ -8,11 +8,13 @@ const expect = require('expect');
 
 
 When('user validates {string} {string}', async function(product, price) {
+  console.log("user validates product information")
   await this.checkoutOverviewPage.verifyProductDetails(product, price);
 });
 
 When('user clicks on Finish button',async function(){
-    await this.checkoutOverviewPage.clickOnFinishButton();
+  console.log("user clicks on Finish button")
+  await this.checkoutOverviewPage.clickOnFinishButton();
 })
 
 

@@ -2,8 +2,8 @@ const { chromium } = require('playwright');
 
 class BasePage {
   constructor() {
-    this.browser = null; // Initialize the browser as null
-    this.page = null; // Initialize the page as null
+    this.browser = null;
+    this.page = null;
     this.locators = {
       pageTitle: "//span[@class='title']",
       cartIcon: "//a[@class='shopping_cart_link']",
@@ -13,7 +13,6 @@ class BasePage {
 
   async startBrowser() {
     this.browser = await chromium.launch({ headless: false,slowMo: 500 });
-     // Start the browser
     this.page = await this.browser.newPage();
   }
 
@@ -41,7 +40,7 @@ class BasePage {
       throw new Error("Error - Success message is Not displayed!");
     }
     console.log("Success message is displayed!")
-    await this.page.waitForTimeout(2000); // hard wait for 5000ms
+    await this.page.waitForTimeout(2000);
 
   }
 

@@ -8,9 +8,11 @@ const expect = require('expect');
 
 
 When('validate product {string} and price {string} is listed in Your Cart page', async function(product, price) {
+  console.log("validate product and price information");
   await this.yourCartPage.verifyProductName(product, price);
 });
 
 When('user clicks on Checkout button',async function(){
-    await this.yourCartPage.clickOnCheckoutButton();
+  console.log("user clicks on Checkout button");
+  await this.yourCartPage.clickOnCheckoutButton();
 });

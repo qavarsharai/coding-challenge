@@ -8,9 +8,11 @@ const expect = require('expect');
 
 
 When('user enters information {string} {string} {string}', async function(firstName, lastName, zipCode)  {
+  console.log("user enters personal information");
   await this.checkoutYourInformaitonPage.fillUserInformation(firstName, lastName, zipCode);
 });
 
 When('user clicks on Continue button', async function()  {
-    await this.checkoutYourInformaitonPage.clickOnContinueButton();
+  console.log("user clicks on Continue button");
+  await this.checkoutYourInformaitonPage.clickOnContinueButton();
   });
