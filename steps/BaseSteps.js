@@ -45,3 +45,8 @@ Then('user validates success message is displayed', async function()  {
   console.log("user validates success message is displayed");
   await this.basePage.verifySuccessMessage();
 });
+
+Then('user clicks on Cart button', async function()  {
+  console.log("user clicks on Cart button");
+  await this.basePage.clickOnCartIconButton();
+});

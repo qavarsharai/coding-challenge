@@ -6,6 +6,7 @@ Background:
 
 Scenario Outline: Verify the user is able to successfully purchase an item in the portal
     When user adds "<Product>" to cart
+    When user clicks on Cart button
     Then user should see page title as "Your Cart"
     And validate product "<Product>" and price "<Price>" is listed in Your Cart page
     When user clicks on Checkout button
